@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+  	<!-- Database connection properties - Driver, URL, user, password -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- Tabela para testes -->
+    <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner</property>-->
+    <!-- Tabela que armazena os posts extraidos pela API, filtrando pela tag 'exception' -->
+    <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_exception_new</property> -->
+    <!-- Tabela que armazena os posts extraidos pela API, filtrando pela tag 'hibernate' --> 
+    <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_hibernate_new</property> -->
+    <!-- Tabela que armazena os posts extraidos pela API, filtrando pela tag 'java' (segunda tentativa) --> 
+    <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_java2</property> -->
+    <!-- Tabela que armazena os posts extraidos pela API, filtrando pela tag 'android' --> 
+    <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_android</property> -->
+	<!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_spring</property> -->    
+	<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_csharp</property> -->
+	<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_tag_net</property> -->
+	<!-- Tabela que armazena os posts extraidos pelo DUMP XML -->
+	<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_all</property>-->    
+
+    <!-- Tabela que armazena os posts extraidos pelo DUMP XML -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miner_all</property>	
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"></property>
+    
+    <!-- Connection Pool Size -->
+    <property name="hibernate.connection.pool_size">1</property>
+     
+    <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
+    <property name="hibernate.current_session_context_class">thread</property>
+     
+    <!-- Outputs the SQL queries, should be disabled in Production -->
+    <property name="hibernate.show_sql">false</property>
+     
+    <!-- Dialect is required to let Hibernate know the Database Type, MySQL, Oracle etc
+        Hibernate 4 automatically figure out Dialect from Database Connection Metadata -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
+
+  </session-factory>
+</hibernate-configuration>
